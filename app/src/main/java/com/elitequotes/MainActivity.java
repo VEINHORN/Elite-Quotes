@@ -1,24 +1,29 @@
 package com.elitequotes;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Html;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     private TextView quoteTextView;
     private TextView quoteAuthorTextView;
-    private Button reloadButton;
+    private ImageButton reloadButton;
     private QuoteLoader quoteLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0A2229")));
+        getSupportActionBar().setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Elite Quotes" + "</font></b>"));
         quoteTextView = (TextView)findViewById(R.id.quoteTextView);
         quoteAuthorTextView = (TextView)findViewById(R.id.quoteAuthorTextView);
-        reloadButton = (Button)findViewById(R.id.reloadButton);
+        reloadButton = (ImageButton)findViewById(R.id.reloadButton);
         reloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

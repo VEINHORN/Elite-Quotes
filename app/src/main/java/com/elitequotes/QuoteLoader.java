@@ -19,7 +19,7 @@ public class QuoteLoader extends AsyncTask<String, Integer, Quote>{
     }
 
     protected Quote doInBackground(String... params) {
-        Quote quote = new Forismatic().getQuote();
+        Quote quote = new Forismatic(Forismatic.ENGLISH).getQuote();
         return quote;
     }
 

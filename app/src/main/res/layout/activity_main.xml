@@ -25,7 +25,9 @@
                     <TextView
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="#474444"
                         android:text="This is my life. I need more money."
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
@@ -33,26 +35,54 @@
                 </ScrollView>
             </LinearLayout>
             <TextView
+                android:textColor="#474444"
                 android:layout_below="@+id/linearLayout"
                 android:layout_marginLeft="20dp"
                 android:id="@+id/quoteAuthorTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boris Korogvich"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
             <RelativeLayout
+                android:padding="3dp"
                 android:layout_below="@+id/quoteAuthorTextView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
-                <Button
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/twitter"
+                    android:background="@drawable/social_buttons_background"
+                    android:id="@+id/imageButton" />
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/facebook"
+                    android:layout_alignBottom="@+id/imageButton"
+                    android:layout_toRightOf="@+id/imageButton"
+                    android:background="@drawable/social_buttons_background"/>
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignBottom="@+id/imageButton2"
+                    android:layout_toRightOf="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vk"
+                    android:background="@drawable/social_buttons_background"/>
+                <ImageButton
+                    android:background="@drawable/social_buttons_background"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignBottom="@+id/imageButton3"
+                    android:layout_toRightOf="@+id/imageButton3"
+                    android:src="@drawable/refresh"
                     android:id="@+id/reloadButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reload quote"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:text="Reload quote"/>
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
