@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="forismatic-api-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/forismatic-api-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

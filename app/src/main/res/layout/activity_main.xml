@@ -1,0 +1,30 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="30sp"
+            android:text="This is my life. I need more money."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quoteTextView"/>
+        <TextView
+            android:id="@+id/quoteAuthorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boris Korogvich"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/quoteTextView"
+            android:layout_alignStart="@+id/quoteTextView" />
+    </RelativeLayout>
+</RelativeLayout>
