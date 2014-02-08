@@ -1,6 +1,7 @@
 package com.elitequotes;
 
 import android.os.AsyncTask;
+import android.widget.TextView;
 
 import com.forismastic.Forismatic;
 import com.forismastic.Forismatic.Quote;
@@ -9,9 +10,12 @@ import com.forismastic.Forismatic.Quote;
  * Created by VEINHORN on 08/02/14.
  */
 public class QuoteLoader extends AsyncTask<String, Integer, Quote>{
+    private TextView quoteTextView;
+    private TextView quoteAuthorTextView;
 
-    public QuoteLoader() {
-
+    public QuoteLoader(TextView quoteTextView, TextView quoteAuthorTextView) {
+        this.quoteTextView = quoteTextView;
+        this.quoteAuthorTextView = quoteAuthorTextView;
     }
 
     protected Quote doInBackground(String... params) {
@@ -20,6 +24,7 @@ public class QuoteLoader extends AsyncTask<String, Integer, Quote>{
     }
 
     protected void onPostExecute(Quote quote) {
-
+        quoteTextView.setText(quote.getQuoteText());
+        quoteAuthorTextView.setText(quote.getQuoteAuthor());
     }
 }
