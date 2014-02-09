@@ -24,14 +24,15 @@ public class MainActivity extends ActionBarActivity {
         quoteTextView = (TextView)findViewById(R.id.quoteTextView);
         quoteAuthorTextView = (TextView)findViewById(R.id.quoteAuthorTextView);
         reloadButton = (ImageButton)findViewById(R.id.reloadButton);
+        //quoteTextView.setAnimation(AnimationUtils.loadAnimation(this, android.R.anim.fade_in));
         reloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quoteLoader = new QuoteLoader(quoteTextView, quoteAuthorTextView);
+                quoteLoader = new QuoteLoader(MainActivity.this, quoteTextView, quoteAuthorTextView);
                 quoteLoader.execute();
             }
         });
-        quoteLoader = new QuoteLoader(quoteTextView, quoteAuthorTextView);
+        quoteLoader = new QuoteLoader(MainActivity.this, quoteTextView, quoteAuthorTextView);
         quoteLoader.execute();
     }
 }
