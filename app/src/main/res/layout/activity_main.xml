@@ -43,19 +43,24 @@
                 android:layout_height="wrap_content"
                 android:text="Boris Korogvich"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
             <RelativeLayout
+                android:background="#45000000"
                 android:padding="3dp"
                 android:layout_below="@+id/quoteAuthorTextView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
+                    android:padding="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/twitter"
-                    android:background="@drawable/social_buttons_background"
+                    android:background="@drawable/buttons_selector"
                     android:id="@+id/imageButton" />
                 <ImageButton
+                    android:padding="5dp"
                     android:id="@+id/imageButton2"
                     android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
@@ -63,8 +68,9 @@
                     android:src="@drawable/facebook"
                     android:layout_alignBottom="@+id/imageButton"
                     android:layout_toRightOf="@+id/imageButton"
-                    android:background="@drawable/social_buttons_background"/>
+                    android:background="@drawable/buttons_selector"/>
                 <ImageButton
+                    android:padding="5dp"
                     android:id="@+id/imageButton3"
                     android:layout_marginLeft="5dp"
                     android:layout_alignBottom="@+id/imageButton2"
@@ -72,17 +78,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/vk"
-                    android:background="@drawable/social_buttons_background"/>
+                    android:background="@drawable/buttons_selector"/>
                 <ImageButton
-                    android:background="@drawable/social_buttons_background"
-                    android:layout_marginLeft="5dp"
-                    android:layout_alignBottom="@+id/imageButton3"
-                    android:layout_toRightOf="@+id/imageButton3"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/buttons_selector"
                     android:src="@drawable/refresh"
                     android:id="@+id/reloadButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reload quote"/>
+                    android:text="Reload quote"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
