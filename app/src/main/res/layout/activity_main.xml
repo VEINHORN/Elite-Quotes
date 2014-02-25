@@ -1,5 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background">
@@ -94,4 +95,12 @@
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
+    <com.google.ads.AdView
+        android:id="@+id/activity_main_adView"
+        ads:adSize="BANNER"
+        ads:adUnitId="60a07802835a4bd9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

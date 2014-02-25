@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 public class MainActivity extends ActionBarActivity {
     private TextView quoteTextView;
     private TextView quoteAuthorTextView;
@@ -58,6 +61,10 @@ public class MainActivity extends ActionBarActivity {
                 shareUtil.shareOnVk();
             }
         });
+
+        AdView adView = (AdView)findViewById(R.id.activity_main_adView);
+        adView.loadAd(new AdRequest());
+
         quoteLoader = new QuoteLoader(MainActivity.this, quoteTextView, quoteAuthorTextView);
         quoteLoader.execute();
     }
