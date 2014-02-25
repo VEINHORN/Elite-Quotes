@@ -8,6 +8,8 @@ import android.widget.TextView;
 import com.forismastic.Forismatic;
 import com.forismastic.Forismatic.Quote;
 
+import java.util.Locale;
+
 /**
  * Created by VEINHORN on 08/02/14.
  */
@@ -24,7 +26,12 @@ public class QuoteLoader extends AsyncTask<String, Integer, Quote>{
     }
 
     protected Quote doInBackground(String... params) {
-        Quote quote = new Forismatic(Forismatic.ENGLISH).getQuote();
+        Quote quote = null;
+        if(Locale.getDefault().getLanguage().equals("ru")) {
+            quote = new Forismatic(Forismatic.RUSSIAN).getQuote();
+        } else {
+            quote = new Forismatic(Forismatic.ENGLISH).getQuote();
+        }
         return quote;
     }
 
