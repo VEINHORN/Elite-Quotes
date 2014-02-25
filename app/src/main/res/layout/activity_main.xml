@@ -61,7 +61,7 @@
                     android:id="@+id/twitterButton" />
                 <ImageButton
                     android:padding="5dp"
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/facebookButton"
                     android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -71,10 +71,10 @@
                     android:background="@drawable/buttons_selector"/>
                 <ImageButton
                     android:padding="5dp"
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/vkButton"
                     android:layout_marginLeft="5dp"
-                    android:layout_alignBottom="@+id/imageButton2"
-                    android:layout_toRightOf="@+id/imageButton2"
+                    android:layout_alignBottom="@+id/facebookButton"
+                    android:layout_toRightOf="@+id/facebookButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/vk"
