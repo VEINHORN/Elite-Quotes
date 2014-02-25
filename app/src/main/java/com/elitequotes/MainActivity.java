@@ -22,6 +22,7 @@ public class MainActivity extends ActionBarActivity {
     private ImageButton vkButton;
     private QuoteLoader quoteLoader;
     private RelativeLayout mainLayout;
+    private BackgroundLoader backgroundLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,8 @@ public class MainActivity extends ActionBarActivity {
         vkButton = (ImageButton)findViewById(R.id.vkButton);
         mainLayout = (RelativeLayout)findViewById(R.id.main_layout);
 
-        mainLayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.background6));
+        backgroundLoader = new BackgroundLoader(this, mainLayout);
+        backgroundLoader.selectBackground();
 
         reloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
