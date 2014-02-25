@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0A2229")));
-        getSupportActionBar().setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Elite Quotes" + "</font></b>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + getString(R.string.app_name) + "</font></b>"));
         quoteTextView = (TextView)findViewById(R.id.quoteTextView);
         quoteAuthorTextView = (TextView)findViewById(R.id.quoteAuthorTextView);
         reloadButton = (ImageButton)findViewById(R.id.reloadButton);
