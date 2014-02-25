@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/twitter"
                     android:background="@drawable/buttons_selector"
-                    android:id="@+id/imageButton" />
+                    android:id="@+id/twitterButton" />
                 <ImageButton
                     android:padding="5dp"
                     android:id="@+id/imageButton2"
@@ -66,8 +66,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/facebook"
-                    android:layout_alignBottom="@+id/imageButton"
-                    android:layout_toRightOf="@+id/imageButton"
+                    android:layout_alignBottom="@+id/twitterButton"
+                    android:layout_toRightOf="@+id/twitterButton"
                     android:background="@drawable/buttons_selector"/>
                 <ImageButton
                     android:padding="5dp"
