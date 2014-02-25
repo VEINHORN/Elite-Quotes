@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.ads.AdRequest;
@@ -20,6 +21,7 @@ public class MainActivity extends ActionBarActivity {
     private ImageButton facebookButton;
     private ImageButton vkButton;
     private QuoteLoader quoteLoader;
+    private RelativeLayout mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,10 @@ public class MainActivity extends ActionBarActivity {
         twitterButton = (ImageButton)findViewById(R.id.twitterButton);
         facebookButton = (ImageButton)findViewById(R.id.facebookButton);
         vkButton = (ImageButton)findViewById(R.id.vkButton);
+        mainLayout = (RelativeLayout)findViewById(R.id.main_layout);
+
+        mainLayout.setBackgroundDrawable(getResources().getDrawable(R.drawable.background6));
+
         reloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

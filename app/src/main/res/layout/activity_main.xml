@@ -1,9 +1,10 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/main_layout"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:layout_height="fill_parent">
+    <!--android:background="@drawable/background"-->
     <RelativeLayout
         android:background="#35000000"
         android:layout_width="fill_parent"
@@ -29,7 +30,7 @@
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:textColor="#474444"
-                        android:text="This is my life. I need more money."
+                        android:text=""
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:id="@+id/quoteTextView"/>
@@ -42,7 +43,7 @@
                 android:id="@+id/quoteAuthorTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boris Korogvich"
+                android:text=""
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
