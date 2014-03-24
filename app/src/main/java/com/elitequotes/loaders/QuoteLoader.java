@@ -1,4 +1,4 @@
-package com.elitequotes;
+package com.elitequotes.loaders;
 
 import android.content.Context;
 import android.os.AsyncTask;

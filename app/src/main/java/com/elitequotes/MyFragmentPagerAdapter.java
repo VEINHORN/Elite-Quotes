@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.elitequotes.favourite.FavouriteFragment;
+
 /**
  * Created by veinhorn on 20.3.14.
  */

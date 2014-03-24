@@ -1,4 +1,4 @@
-package com.elitequotes;
+package com.elitequotes.share;
 
 import android.content.Context;
 import android.content.Intent;

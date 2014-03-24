@@ -10,6 +10,9 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.elitequotes.loaders.BackgroundLoader;
+import com.elitequotes.loaders.QuoteLoader;
+import com.elitequotes.share.ShareUtil;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 

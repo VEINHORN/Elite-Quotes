@@ -1,7 +1,9 @@
-package com.elitequotes;
+package com.elitequotes.loaders;
 
 import android.content.Context;
 import android.widget.RelativeLayout;
+
+import com.elitequotes.R;
 
 import java.util.Random;
 
