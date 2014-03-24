@@ -15,12 +15,14 @@ import com.elitequotes.favourite.FavouriteItem;
 public class DatabaseHandler extends SQLiteOpenHelper {
     private final static int DATABASE_VERSION = 1;
     private final static String DATABASE_NAME = "EliteQuotesDB";
-
     private final static String FAVOURITE_TABLE = "favourite";
+    private final static String FAVOURITE_TABLE_ID = "id";
+    private final static String FAVOURITE_TABLE_QUOTE_TEXT = "quote_text";
+    private final static String FAVOURITE_TABLE_QUOTE_AUTHOR = "quote_author";
     private final static String CREATE_FAVOURITE_TABLE = "CREATE TABLE " + FAVOURITE_TABLE + " ( " +
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            "quote_text TEXT, " +
-            "quote_author TEXT)";
+            FAVOURITE_TABLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            FAVOURITE_TABLE_QUOTE_TEXT + " TEXT, " +
+            FAVOURITE_TABLE_QUOTE_AUTHOR + " TEXT)";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -40,8 +42,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void addFavourite(FavouriteItem favouriteItem) {
         SQLiteDatabase database = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("quote_text", favouriteItem.getQuoteText());
-        contentValues.put("quote_author", favouriteItem.getQuoteAuthor());
+        contentValues.put(FAVOURITE_TABLE_QUOTE_TEXT, favouriteItem.getQuoteText());
+        contentValues.put(FAVOURITE_TABLE_QUOTE_AUTHOR, favouriteItem.getQuoteAuthor());
         database.insert(FAVOURITE_TABLE, null, contentValues);
         database.close();
     }
