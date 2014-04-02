@@ -39,13 +39,27 @@
             <TextView
                 android:textColor="#474444"
                 android:layout_below="@+id/linearLayout"
-                android:layout_marginLeft="20dp"
                 android:id="@+id/quoteAuthorTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <ImageButton
+                android:id="@+id/favourite_button"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/favourite_button_selector"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bottom_favorite_no"
+                android:layout_above="@+id/relativeLayout"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"/>
             <RelativeLayout
@@ -53,7 +67,8 @@
                 android:padding="3dp"
                 android:layout_below="@+id/quoteAuthorTextView"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout">
                 <ImageButton
                     android:padding="5dp"
                     android:layout_width="wrap_content"
