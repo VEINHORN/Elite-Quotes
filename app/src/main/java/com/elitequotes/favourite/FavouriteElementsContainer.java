@@ -19,4 +19,15 @@ public class FavouriteElementsContainer {
     public void setFavouriteItemsArrayList(ArrayList<FavouriteItem> favouriteItemsArrayList) {
         this.favouriteItemsArrayList = favouriteItemsArrayList;
     }
+
+    public boolean search(String quoteText) {
+        boolean isSuch = false;
+        for(FavouriteItem favouriteItem : favouriteItemsArrayList) {
+            if(favouriteItem.getQuoteText().equals(quoteText)) {
+                isSuch = true;
+                return isSuch;
+            }
+        }
+        return isSuch;
+    }
 }

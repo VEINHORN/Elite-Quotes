@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.elitequotes.database.DatabaseHandler;
+import com.elitequotes.favourite.FavouriteItem;
 import com.elitequotes.loaders.BackgroundLoader;
 import com.elitequotes.loaders.QuoteLoader;
 import com.elitequotes.share.ShareUtil;
@@ -30,10 +32,12 @@ public class QuoteFragment extends Fragment {
     private QuoteLoader quoteLoader;
     private RelativeLayout mainLayout;
     private BackgroundLoader backgroundLoader;
+    private DatabaseHandler databaseHandler;
 
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState) {
         final Activity activity = getActivity();
+        databaseHandler = new DatabaseHandler(activity);
         View rootView = layoutInflater.inflate(R.layout.quote_fragment, container, false);
         quoteTextView = (TextView)rootView.findViewById(R.id.quoteTextView);
         quoteAuthorTextView = (TextView)rootView.findViewById(R.id.quoteAuthorTextView);
@@ -42,12 +46,15 @@ public class QuoteFragment extends Fragment {
         facebookButton = (ImageButton)rootView.findViewById(R.id.facebookButton);
         vkButton = (ImageButton)rootView.findViewById(R.id.vkButton);
         favouriteButton = (ImageButton)rootView.findViewById(R.id.favourite_button);
+
         favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
+
         favouriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int id = (int)favouriteButton.getTag();
                 if(id == R.drawable.ic_bottom_favorite_no) {
+                    databaseHandler.addFavourite(new FavouriteItem(quoteTextView.getText().toString(), quoteAuthorTextView.getText().toString()));
                     favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_ok));
                     favouriteButton.setTag(R.drawable.ic_bottom_favorite_ok);
                 } else {
