@@ -22,6 +22,7 @@ import com.google.ads.AdView;
 public class QuoteFragment extends Fragment {
     private TextView quoteTextView;
     private TextView quoteAuthorTextView;
+    private ImageButton favouriteButton;
     private ImageButton reloadButton;
     private ImageButton twitterButton;
     private ImageButton facebookButton;
@@ -40,6 +41,21 @@ public class QuoteFragment extends Fragment {
         twitterButton = (ImageButton)rootView.findViewById(R.id.twitterButton);
         facebookButton = (ImageButton)rootView.findViewById(R.id.facebookButton);
         vkButton = (ImageButton)rootView.findViewById(R.id.vkButton);
+        favouriteButton = (ImageButton)rootView.findViewById(R.id.favourite_button);
+        favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
+        favouriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = (int)favouriteButton.getTag();
+                if(id == R.drawable.ic_bottom_favorite_no) {
+                    favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_ok));
+                    favouriteButton.setTag(R.drawable.ic_bottom_favorite_ok);
+                } else {
+                    favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_no));
+                    favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
+                }
+            }
+        });
         mainLayout = (RelativeLayout)rootView.findViewById(R.id.main_layout);
         backgroundLoader = new BackgroundLoader(activity, mainLayout);
         backgroundLoader.selectBackground();
