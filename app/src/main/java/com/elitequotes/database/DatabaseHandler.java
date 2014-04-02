@@ -56,7 +56,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if(cursor.moveToFirst()) {
             do {
                 FavouriteItem favouriteItem = new FavouriteItem(cursor.getString(1), cursor.getString(2));
-                favouriteElementsContainer.getFavouriteItemsArrayList().add(favouriteItem);
+                favouriteElementsContainer.addFavouriteItem(favouriteItem);
 
             }while(cursor.moveToNext());
         }

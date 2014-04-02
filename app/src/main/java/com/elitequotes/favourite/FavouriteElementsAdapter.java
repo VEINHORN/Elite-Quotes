@@ -29,12 +29,12 @@ public class FavouriteElementsAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return favouriteElementsContainer.getFavouriteItemsArrayList().size();
+        return favouriteElementsContainer.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return favouriteElementsContainer.getFavouriteItemsArrayList().get(position);
+        return favouriteElementsContainer.getFavouriteItem(position);
     }
 
     @Override
@@ -53,8 +53,8 @@ public class FavouriteElementsAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder)convertView.getTag();
         }
-        viewHolder.quoteText.setText(favouriteElementsContainer.getFavouriteItemsArrayList().get(position).getQuoteText());
-        viewHolder.quoteAuthor.setText(favouriteElementsContainer.getFavouriteItemsArrayList().get(position).getQuoteAuthor());
+        viewHolder.quoteText.setText(favouriteElementsContainer.getFavouriteItem(position).getQuoteText());
+        viewHolder.quoteAuthor.setText(favouriteElementsContainer.getFavouriteItem(position).getQuoteAuthor());
         return convertView;
     }
 }

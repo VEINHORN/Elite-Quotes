@@ -12,14 +12,6 @@ public class FavouriteElementsContainer {
         favouriteItemsArrayList = new ArrayList<FavouriteItem>();
     }
 
-    public ArrayList<FavouriteItem> getFavouriteItemsArrayList() {
-        return favouriteItemsArrayList;
-    }
-
-    public void setFavouriteItemsArrayList(ArrayList<FavouriteItem> favouriteItemsArrayList) {
-        this.favouriteItemsArrayList = favouriteItemsArrayList;
-    }
-
     public boolean search(String quoteText) {
         boolean isSuch = false;
         for(FavouriteItem favouriteItem : favouriteItemsArrayList) {
@@ -29,5 +21,17 @@ public class FavouriteElementsContainer {
             }
         }
         return isSuch;
+    }
+
+    public void addFavouriteItem(FavouriteItem favouriteItem) {
+        favouriteItemsArrayList.add(favouriteItem);
+    }
+
+    public int size() {
+        return favouriteItemsArrayList.size();
+    }
+
+    public FavouriteItem getFavouriteItem(int position) {
+        return favouriteItemsArrayList.get(position);
     }
 }

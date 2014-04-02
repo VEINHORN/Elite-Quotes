@@ -34,7 +34,7 @@ public class FavouriteFragment extends Fragment {
     }
 
     public void updateData(FavouriteItem favouriteItem) {
-        favouriteElementsContainer.getFavouriteItemsArrayList().add(favouriteItem);
+        favouriteElementsContainer.addFavouriteItem(favouriteItem);
         favouriteElementsAdapter.notifyDataSetChanged();
         //Log.d("Boris Korogvich", "100500");
     }
