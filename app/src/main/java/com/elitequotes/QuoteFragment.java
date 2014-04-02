@@ -54,7 +54,9 @@ public class QuoteFragment extends Fragment {
             public void onClick(View v) {
                 int id = (int)favouriteButton.getTag();
                 if(id == R.drawable.ic_bottom_favorite_no) {
-                    databaseHandler.addFavourite(new FavouriteItem(quoteTextView.getText().toString(), quoteAuthorTextView.getText().toString()));
+                    if(!new DatabaseHandler(activity).getAllFavouriteElements().search(quoteTextView.getText().toString())) {
+                        databaseHandler.addFavourite(new FavouriteItem(quoteTextView.getText().toString(), quoteAuthorTextView.getText().toString()));
+                    }
                     favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_ok));
                     favouriteButton.setTag(R.drawable.ic_bottom_favorite_ok);
                 } else {
@@ -71,6 +73,9 @@ public class QuoteFragment extends Fragment {
             public void onClick(View v) {
                 quoteLoader = new QuoteLoader(activity, quoteTextView, quoteAuthorTextView);
                 quoteLoader.execute();
+                // Added for example
+                favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_no));
+                favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
             }
         });
         twitterButton.setOnClickListener(new View.OnClickListener() {
