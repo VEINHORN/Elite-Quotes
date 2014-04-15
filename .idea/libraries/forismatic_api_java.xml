@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="forismatic-api-java">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/forismatic-api-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EliteQuotes/libs/forismatic-api-java.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
