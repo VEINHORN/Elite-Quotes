@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
     private ViewPager viewPager;
@@ -31,5 +32,16 @@ public class MainActivity extends ActionBarActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.mainmenu_settings:
+                break;
+            case R.id.mainmenu_about:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
