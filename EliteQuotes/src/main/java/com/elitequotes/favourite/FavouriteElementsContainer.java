@@ -1,15 +1,16 @@
 package com.elitequotes.favourite;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by veinhorn on 25.3.14.
  */
 public class FavouriteElementsContainer {
-    private ArrayList<FavouriteItem> favouriteItemsArrayList;
+    private List<FavouriteItem> favouriteItemsArrayList;
 
     public FavouriteElementsContainer() {
-        favouriteItemsArrayList = new ArrayList<FavouriteItem>();
+        favouriteItemsArrayList = new ArrayList<>();
     }
 
     public boolean search(String quoteText) {
