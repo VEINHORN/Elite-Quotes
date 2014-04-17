@@ -1,1 +1,1 @@
-include ':AppRater', 'EliteQuotes'
+include ':AppRater', ':AndroidStyledDialogs', 'EliteQuotes'

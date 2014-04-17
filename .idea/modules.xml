@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStyledDialogs/AndroidStyledDialogs.iml" filepath="$PROJECT_DIR$/AndroidStyledDialogs/AndroidStyledDialogs.iml" />
       <module fileurl="file://$PROJECT_DIR$/AppRater/AppRater.iml" filepath="$PROJECT_DIR$/AppRater/AppRater.iml" />
       <module fileurl="file://$PROJECT_DIR$/Elite-Quotes.iml" filepath="$PROJECT_DIR$/Elite-Quotes.iml" />
       <module fileurl="file://$PROJECT_DIR$/EliteQuotes.iml" filepath="$PROJECT_DIR$/EliteQuotes.iml" />

@@ -29,4 +29,5 @@ dependencies {
     compile files('libs/forismatic-api-java.jar')
     compile files('libs/GoogleAdMobAdsSdk-6.4.1.jar')
     compile project(':AppRater')
+    compile project(':AndroidStyledDialogs')
 }
