@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 public class MainActivity extends ActionBarActivity {
     private ViewPager viewPager;
@@ -22,5 +24,12 @@ public class MainActivity extends ActionBarActivity {
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         viewPager = (ViewPager)findViewById(R.id.viewpager);
         viewPager.setAdapter(myFragmentPagerAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main, menu);
+        return true;
     }
 }
