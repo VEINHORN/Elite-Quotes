@@ -19,12 +19,32 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActionBar actionBar = getSupportActionBar();
+        final ActionBar actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0A2229")));
         actionBar.setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Elite Quotes" + "</font></b>"));
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         viewPager = (ViewPager)findViewById(R.id.viewpager);
         viewPager.setAdapter(myFragmentPagerAdapter);
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position == MyFragmentPagerAdapter.QUOTE_FRAGMENT) {
+                    actionBar.setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Elite Quotes" + "</font></b>"));
+                } else if(position == MyFragmentPagerAdapter.FAVOURITE_FRAGMENT) {
+                    actionBar.setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Favourite" + "</font></b>"));
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override
