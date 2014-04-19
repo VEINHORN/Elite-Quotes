@@ -39,9 +39,4 @@ public class FavouriteFragment extends Fragment {
         favouriteListView.setAdapter(favouriteElementsAdapter);
         return rootView;
     }
-
-    public void updateData(FavouriteItem favouriteItem) {
-        favouriteElementsContainer.addFavouriteItem(favouriteItem);
-        favouriteElementsAdapter.notifyDataSetChanged();
-    }
 }
