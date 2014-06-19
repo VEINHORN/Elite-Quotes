@@ -9,36 +9,38 @@ import android.widget.TextView;
 
 import com.elitequotes.R;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 /**
  * Created by veinhorn on 25.3.14.
  */
 public class FavouriteElementsAdapter extends BaseAdapter {
-    private static class ViewHolder {
-        public TextView quoteText;
-        public TextView quoteAuthor;
+    static class ViewHolder {
+        @InjectView(R.id.favouriteQuoteText) TextView quoteText;
+        @InjectView(R.id.favouriteQuoteTextAuthor) TextView quoteAuthor;
+
+        public ViewHolder(View view) {
+            ButterKnife.inject(this, view);
+        }
     }
-    private Context context;
     private LayoutInflater layoutInflater;
     private FavouriteElementsContainer favouriteElementsContainer;
 
     public FavouriteElementsAdapter(Context context, FavouriteElementsContainer favouriteElementsContainer) {
-        this.context = context;
         this.favouriteElementsContainer = favouriteElementsContainer;
         layoutInflater = LayoutInflater.from(context);
     }
 
-    @Override
-    public int getCount() {
+    @Override public int getCount() {
         return favouriteElementsContainer.size();
     }
 
-    @Override
-    public Object getItem(int position) {
+    @Override public Object getItem(int position) {
         return favouriteElementsContainer.getFavouriteItem(position);
     }
 
-    @Override
-    public long getItemId(int position) {
+    @Override public long getItemId(int position) {
         return position;
     }
 
@@ -46,9 +48,7 @@ public class FavouriteElementsAdapter extends BaseAdapter {
         ViewHolder viewHolder;
         if(convertView == null) {
             convertView = layoutInflater.inflate(R.layout.favourite_item, null);
-            viewHolder = new ViewHolder();
-            viewHolder.quoteText = (TextView)convertView.findViewById(R.id.favouriteQuoteText);
-            viewHolder.quoteAuthor = (TextView)convertView.findViewById(R.id.favouriteQuoteTextAuthor);
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder)convertView.getTag();

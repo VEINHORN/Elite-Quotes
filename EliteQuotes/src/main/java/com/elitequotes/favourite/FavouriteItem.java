@@ -4,8 +4,7 @@ package com.elitequotes.favourite;
  * Created by veinhorn on 25.3.14.
  */
 public class FavouriteItem {
-    private String quoteText;
-    private String quoteAuthor;
+    private String quoteText, quoteAuthor;
 
     public FavouriteItem(String quoteText, String quoteAuthor) {
         this.quoteText = quoteText;

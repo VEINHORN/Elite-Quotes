@@ -14,8 +14,7 @@ public class BackgroundLoader {
     private Context context;
     private ViewGroup viewGroup;
     private int[] backgrounds = { R.drawable.background, R.drawable.background2, R.drawable.background3, R.drawable.background4, R.drawable.background5, R.drawable.background6 };
-    private final static int MIN = 0;
-    private final static int MAX = 5;
+    private final static int MIN = 0, MAX = 5;
 
     public BackgroundLoader(Context context, ViewGroup viewGroup) {
         this.context = context;

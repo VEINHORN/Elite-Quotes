@@ -10,9 +10,7 @@ import com.elitequotes.favourite.FavouriteFragment;
  * Created by veinhorn on 20.3.14.
  */
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
-    public final static int QUOTE_FRAGMENT = 0;
-    public final static int FAVOURITE_FRAGMENT = 1;
-    public final static int TABS_NUMBER = 2;
+    public final static int QUOTE_FRAGMENT = 0, FAVOURITE_FRAGMENT = 1, TABS_NUMBER = 2;
 
     public MyFragmentPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);

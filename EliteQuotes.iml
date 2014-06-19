@@ -57,23 +57,8 @@
       <sourceFolder url="file://$MODULE_DIR$/EliteQuotes/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/EliteQuotes/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/EliteQuotes/src/androidTest/rs" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/apk" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/assets" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/dependency-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/dex" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/exploded-aar" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/intermediates" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/libs" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/ndk" />
       <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/pre-dexed" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/res" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/rs" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/source" />
-      <excludeFolder url="file://$MODULE_DIR$/EliteQuotes/build/symbols" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

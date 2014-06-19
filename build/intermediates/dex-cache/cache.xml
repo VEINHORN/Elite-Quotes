@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/classes-e5c5a62165df54e0e3176605df7653603a48bab4.jar"
+        jar="/home/veinhorn/Desktop/github/Elite-Quotes/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/butterknife-5.1.0-5bc804c94742caad0a048b3e253fa3bfda542010.jar"
+        jar="/home/veinhorn/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/5.1.0/42e2b5bbe9a148d09d58f78362d02fcfa505c4d2/butterknife-5.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="42e2b5bbe9a148d09d58f78362d02fcfa505c4d2"/>
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/classes-2372b6c25c5d15bdadfa98cdb627c9f4797770df.jar"
+        jar="/home/veinhorn/Desktop/github/Elite-Quotes/build/intermediates/exploded-aar/Elite-Quotes/AppRater/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="365d4a9aca74c7961305b5ea391d8948fb53155b"/>
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/GoogleAdMobAdsSdk-6.4.1-0466605badbfb7bac7c7f1e73533630da4b83f36.jar"
+        jar="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/libs/GoogleAdMobAdsSdk-6.4.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="6262c554ef5744538d526465aa73704810705734"/>
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/forismatic-api-java-e9b675a5d6c3b56860db139a4d1951fdec1b28ae.jar"
+        jar="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/libs/forismatic-api-java.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5cd3728ee5b8cbbf232035b50e36fc3d4978d8ed"/>
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/support-v4-19.1.0-5c34a50b9c8f3028e56d1621544dd510e98e1ab6.jar"
+        jar="/home/veinhorn/Desktop/android-studio/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="/home/veinhorn/Desktop/github/Elite-Quotes/EliteQuotes/build/intermediates/pre-dexed/debug/classes-62b165beb4eea52b104f784cd3669e4d7eb25b98.jar"
+        jar="/home/veinhorn/Desktop/github/Elite-Quotes/build/intermediates/exploded-aar/Elite-Quotes/AndroidStyledDialogs/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d3735a505f78667697d580de1c480f5e3951a3c7"/>
+
+</pre-dex-items>

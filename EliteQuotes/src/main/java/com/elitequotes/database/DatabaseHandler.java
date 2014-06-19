@@ -28,13 +28,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase database) {
+    @Override public void onCreate(SQLiteDatabase database) {
         database.execSQL(CREATE_FAVOURITE_TABLE);
     }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
+    @Override public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + FAVOURITE_TABLE);
         onCreate(database);
     }

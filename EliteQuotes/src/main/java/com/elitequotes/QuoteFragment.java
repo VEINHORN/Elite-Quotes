@@ -18,91 +18,76 @@ import com.elitequotes.share.ShareUtil;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
+
 /**
  * Created by veinhorn on 20.3.14.
  */
 public class QuoteFragment extends Fragment {
-    private TextView quoteTextView;
-    private TextView quoteAuthorTextView;
-    private ImageButton favouriteButton;
-    private ImageButton reloadButton;
-    private ImageButton twitterButton;
-    private ImageButton facebookButton;
-    private ImageButton vkButton;
+    @InjectView(R.id.quoteTextView) TextView quoteTextView;
+    @InjectView(R.id.quoteAuthorTextView) TextView quoteAuthorTextView;
+    @InjectView(R.id.favourite_button) ImageButton favouriteButton;
+    @InjectView(R.id.reloadButton) ImageButton reloadButton;
+    @InjectView(R.id.twitterButton) ImageButton twitterButton;
+    @InjectView(R.id.facebookButton) ImageButton facebookButton;
+    @InjectView(R.id.vkButton) ImageButton vkButton;
+    @InjectView(R.id.main_layout) RelativeLayout mainLayout;
     private QuoteLoader quoteLoader;
-    private RelativeLayout mainLayout;
     private BackgroundLoader backgroundLoader;
     private DatabaseHandler databaseHandler;
+    private Activity activity;
 
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup container, Bundle savedInstanceState) {
-        final Activity activity = getActivity();
+        activity = getActivity();
         databaseHandler = new DatabaseHandler(activity);
         View rootView = layoutInflater.inflate(R.layout.quote_fragment, container, false);
-        quoteTextView = (TextView)rootView.findViewById(R.id.quoteTextView);
-        quoteAuthorTextView = (TextView)rootView.findViewById(R.id.quoteAuthorTextView);
-        reloadButton = (ImageButton)rootView.findViewById(R.id.reloadButton);
-        twitterButton = (ImageButton)rootView.findViewById(R.id.twitterButton);
-        facebookButton = (ImageButton)rootView.findViewById(R.id.facebookButton);
-        vkButton = (ImageButton)rootView.findViewById(R.id.vkButton);
-        favouriteButton = (ImageButton)rootView.findViewById(R.id.favourite_button);
-
+        ButterKnife.inject(this, rootView);
         favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
 
-        favouriteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int id = (int)favouriteButton.getTag();
-                if(id == R.drawable.ic_bottom_favorite_no) {
-                    if(!new DatabaseHandler(activity).getAllFavouriteElements().search(quoteTextView.getText().toString())) {
-                        databaseHandler.addFavourite(new FavouriteItem(quoteTextView.getText().toString(), quoteAuthorTextView.getText().toString()));
-                    }
-                    favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_ok));
-                    favouriteButton.setTag(R.drawable.ic_bottom_favorite_ok);
-                } else {
-                    favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_no));
-                    favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
-                }
-            }
-        });
-        mainLayout = (RelativeLayout)rootView.findViewById(R.id.main_layout);
         backgroundLoader = new BackgroundLoader(activity, mainLayout);
         backgroundLoader.selectBackground();
-        reloadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                quoteLoader = new QuoteLoader(activity, quoteTextView, quoteAuthorTextView);
-                quoteLoader.execute();
-                // Added for example
-                favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_no));
-                favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
-            }
-        });
-        twitterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ShareUtil shareUtil = new ShareUtil(activity, quoteLoader.getLastQuote());
-                shareUtil.shareOnTwitter();
-            }
-        });
-        facebookButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ShareUtil shareUtil = new ShareUtil(activity, quoteLoader.getLastQuote());
-                shareUtil.shareOnFacebook();
-            }
-        });
-        vkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ShareUtil shareUtil = new ShareUtil(activity, quoteLoader.getLastQuote());
-                shareUtil.shareOnVk();
-            }
-        });
+
         AdView adView = (AdView)rootView.findViewById(R.id.activity_main_adView);
         adView.loadAd(new AdRequest());
         quoteLoader = new QuoteLoader(activity, quoteTextView, quoteAuthorTextView);
         quoteLoader.execute();
         return rootView;
+    }
+
+    @OnClick(R.id.reloadButton) public void reload() {
+        quoteLoader = new QuoteLoader(activity, quoteTextView, quoteAuthorTextView);
+        quoteLoader.execute();
+    }
+
+    @OnClick(R.id.favourite_button) public void addToFavourite() {
+        int id = (int)favouriteButton.getTag();
+        if(id == R.drawable.ic_bottom_favorite_no) {
+            if(!new DatabaseHandler(activity).getAllFavouriteElements().search(quoteTextView.getText().toString())) {
+                databaseHandler.addFavourite(new FavouriteItem(quoteTextView.getText().toString(), quoteAuthorTextView.getText().toString()));
+            }
+            favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_ok));
+            favouriteButton.setTag(R.drawable.ic_bottom_favorite_ok);
+        } else {
+            favouriteButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_bottom_favorite_no));
+            favouriteButton.setTag(R.drawable.ic_bottom_favorite_no);
+        }
+    }
+
+    @OnClick(R.id.twitterButton) public void shareOnTwitter() {
+        ShareUtil shareUtil = new ShareUtil(activity, quoteLoader.getLastQuote());
+        shareUtil.shareOnTwitter();
+    }
+
+    @OnClick(R.id.facebookButton) public void shareOnFacebook() {
+        ShareUtil shareUtil = new ShareUtil(activity, quoteLoader.getLastQuote());
+        shareUtil.shareOnFacebook();
+    }
+
+    @OnClick(R.id.vkButton) public void shareOnVk() {
+        ShareUtil shareUtil = new ShareUtil(activity, quoteLoader.getLastQuote());
+        shareUtil.shareOnVk();
     }
 }

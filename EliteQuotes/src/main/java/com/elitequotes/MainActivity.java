@@ -11,8 +11,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 public class MainActivity extends ActionBarActivity {
-    private ViewPager viewPager;
+    @InjectView(R.id.viewpager) ViewPager viewPager;
     private MyFragmentPagerAdapter myFragmentPagerAdapter;
 
     @Override
@@ -23,16 +26,12 @@ public class MainActivity extends ActionBarActivity {
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0A2229")));
         actionBar.setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Elite Quotes" + "</font></b>"));
         myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
-        viewPager = (ViewPager)findViewById(R.id.viewpager);
+        ButterKnife.inject(this);
         viewPager.setAdapter(myFragmentPagerAdapter);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            @Override public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) { }
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
+            @Override public void onPageSelected(int position) {
                 if(position == MyFragmentPagerAdapter.QUOTE_FRAGMENT) {
                     actionBar.setTitle(Html.fromHtml("<b><font color=\"#BDBDBD\">" + "Elite Quotes" + "</font></b>"));
                 } else if(position == MyFragmentPagerAdapter.FAVOURITE_FRAGMENT) {
@@ -40,22 +39,17 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
 
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
+            @Override public void onPageScrollStateChanged(int state) { }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    @Override public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main, menu);
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
             case R.id.mainmenu_settings:
                 break;
