@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/veinhorn/Desktop/github/Elite-Quotes/AppRater/src/main/res/values-he/strings.xml -->
+    <eat-comment />
+
+    <string name="dialog_title">דירוג %s</string>
+    <string name="later">אחר כך</string>
+    <string name="no_thanks">לא תודה</string>
+    <string name="rate">דרג עכשיו</string>
+    <string name="rate_message">אם אתה נהנה להשתמש באפליקציה, אנא הקדש דקה מזמנך על מנת לדרג את האפליקציה. תודה על תמיכתך</string>
+
+</resources>

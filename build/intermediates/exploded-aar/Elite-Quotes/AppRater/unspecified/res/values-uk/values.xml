@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/veinhorn/Desktop/github/Elite-Quotes/AppRater/src/main/res/values-uk/strings.xml -->
+    <eat-comment />
+
+    <string name="dialog_title">Оцінити %s</string>
+    <string name="later">Не зараз</string>
+    <string name="no_thanks">Ні, дякую</string>
+    <string name="rate">Оцінити зараз</string>
+    <string name="rate_message">Якщо Вам подобається цей додаток, будь ласка, оцініть його. Дякуємо за підтримку!</string>
+
+</resources>

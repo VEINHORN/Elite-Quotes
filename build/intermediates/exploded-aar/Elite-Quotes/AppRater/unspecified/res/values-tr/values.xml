@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/veinhorn/Desktop/github/Elite-Quotes/AppRater/src/main/res/values-tr/strings.xml -->
+    <eat-comment />
+
+    <string name="dialog_title">%s Derecelendir</string>
+    <string name="later">Sonra</string>
+    <string name="no_thanks">Hayır</string>
+    <string name="rate">Şimdi</string>
+    <string name="rate_message">Bu uygulamayı beğendiyseniz lütfen derecelendirin. Desteğiniz için teşekkürler.</string>
+
+</resources>

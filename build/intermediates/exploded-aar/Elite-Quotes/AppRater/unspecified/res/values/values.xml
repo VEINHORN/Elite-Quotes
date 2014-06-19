@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/veinhorn/Desktop/github/Elite-Quotes/AppRater/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="dialog_title">Rate %s</string>
+    <string name="later">Later</string>
+    <string name="no_thanks">No thanks</string>
+    <string name="rate">Rate Now</string>
+    <string name="rate_message">If you enjoy using this app, please take a moment to rate it. Thanks for your support!</string>
+
+</resources>

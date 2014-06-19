@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/veinhorn/Desktop/github/Elite-Quotes/AppRater/src/main/res/values-sr/strings.xml -->
+    <eat-comment />
+
+    <string name="dialog_title">Оцени %s</string>
+    <string name="later">Kasnije</string>
+    <string name="no_thanks">Не, хвала</string>
+    <string name="rate">Оцени сада</string>
+    <string name="rate_message">Ако вам се свиђе ова апликација, молим вас одвојите мало времена да је оцените. Хвала на подршци!</string>
+
+</resources>

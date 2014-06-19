@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/home/veinhorn/Desktop/github/Elite-Quotes/AppRater/src/main/res/values-vi/strings.xml -->
+    <eat-comment />
+
+    <string name="dialog_title">Bình chon cho %s</string>
+    <string name="later">Cừ từ từ</string>
+    <string name="no_thanks">Không, cảm ơn.</string>
+    <string name="rate">Bình chọn ngay!</string>
+    <string name="rate_message">Hi, nếu bạn thấy sử dụng ứng dụng này hay, vui lòng dành chút thời gian bình chọn cho chúng tôi bạn nhé. Chúng tôi rất cảm ơn sự nhiệt tình ủng hộ của bạn.</string>
+
+</resources>
