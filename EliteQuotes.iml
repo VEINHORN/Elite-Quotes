@@ -80,6 +80,7 @@
     <orderEntry type="library" exported="" name="appcompat-v7-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="GoogleAdMobAdsSdk-6.4.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
+    <orderEntry type="library" exported="" name="butterknife-5.1.0" level="project" />
     <orderEntry type="library" exported="" name="forismatic-api-java" level="project" />
     <orderEntry type="module" module-name="AppRater" exported="" />
     <orderEntry type="module" module-name="AndroidStyledDialogs" exported="" />

@@ -24,6 +24,7 @@ android {
 }
 
 dependencies {
+    compile 'com.jakewharton:butterknife:5.1.0'
     compile 'com.android.support:appcompat-v7:+'
     compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     compile files('libs/forismatic-api-java.jar')
